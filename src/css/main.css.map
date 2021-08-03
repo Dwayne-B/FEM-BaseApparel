@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss","main.css"],"names":[],"mappings":"AAAA,KACI,uBCCJ","file":"main.css","sourcesContent":["main{\r\n    background-color:violet;\r\n}","main {\n  background-color: violet;\n}"]}
