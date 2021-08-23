@@ -13,12 +13,9 @@ const browsersync = require('browser-sync').create();
           .pipe(postcss([cssnano()]))
           .pipe(dest('./src/css', { sourcemaps: '.' }));
       }    
-    // task("sass", async ()=>{
-    //     src('./src/sass/*.scss',{sourcemaps:true}).pipe(sass()).pipe(postcss([cssnano()])).pipe(dest('dist',{sourcemaps:'.'}))
-    // })
+    
     //browser sync tasks
 
-    //browser sync serve
     const browserSyncServe =(cb)=>{
         browsersync.init({
             server:{
@@ -36,7 +33,7 @@ const browsersync = require('browser-sync').create();
     //watch tasks
     const watchTask = ()=>{
         watch('./src/*.html', browserSyncReload);
-        watch('./src/sass/*.scss',series(scssTask,browserSyncReload))
+        watch('./src/sass/**',series(scssTask,browserSyncReload))
     }
     task('default',series(scssTask,browserSyncServe,watchTask))
 // const watchTask = ()=>{
@@ -71,12 +68,5 @@ const browsersync = require('browser-sync').create();
 //     src('./src').pipe(dest('dist'))
 //     });
 
-
-
-
-// DEPLOY //
-/*runs all the tasks , but runs similar tasks together
-* saves time 
-*/
-// task("deploy",series( parallel(sourceMaps,minify),copySourceFilesToDist));
+// task('build',series())
 
