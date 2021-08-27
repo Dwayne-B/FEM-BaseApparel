@@ -1,0 +1,14 @@
+@use "../util" as *;
+
+
+.main_content_title{
+  
+
+    padding-bottom: rem(20);
+    span{
+        display: block;
+    }
+}
+.main_content_text{
+    margin-bottom: rem(32);
+}
