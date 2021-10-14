@@ -1,0 +1,22 @@
+// 1440 dsk - 375 mobile
+$breakpoints:(
+	'mobile': 320px,
+	'tablet': 425px,
+	'desktop': 760px,
+);
+// rem(760)
+
+// use @mixin to init a mixin 
+// set mixin name 
+/*in this case mixinName  
+/ === breakpoint
+/ then set a @PARAM for the 
+/mixin to take.
+*/
+@mixin breakpoint($size) {
+	@media (min-width: map-get($breakpoints, $size)) {
+		@content;
+	}
+}
+
+

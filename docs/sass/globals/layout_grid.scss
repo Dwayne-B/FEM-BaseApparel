@@ -1,0 +1,53 @@
+// ## Layout
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+@use "../util" as *;
+
+.wrapper{
+@include breakpoint(desktop){
+    // padding-left: 165px;
+    display: grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-template-areas: 
+    "content content content content content . . img img img img img"
+    
+    
+    ;
+    
+}
+      
+}
+
+.header{
+   grid-area: content;
+
+  
+    
+    padding: 31px 243px 32px 32px;
+    @include breakpoint(desktop){
+        padding: rem(74.91) rem(507) rem(0) rem(165);
+       
+    }
+
+   
+}
+
+.main_content{
+    text-align: center;
+   grid-area: content;
+    padding: 64px 32px 92px 32px;
+    @include breakpoint(desktop){
+    text-align: left;
+    padding: rem(0) rem(0) rem(0) rem(165);
+        margin-top: rem(200);
+        max-width: rem(550);
+        min-width: rem(375);
+    }
+    
+}
+.hero{
+    grid-area: img;
+}
