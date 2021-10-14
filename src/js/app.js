@@ -1,5 +1,1 @@
-const $form = document.querySelector(".main_content_form");
-
-$form[0].addEventListener('submit',(e)=>{
-    e.preventDefault();
-})
+const email=document.getElementById("user_email"),form=document.querySelector(".main_content_form"),btn=document.querySelector(".submit-btn"),msg=document.querySelector(".error-msg");function validation(){const e=email.value.trim();if(""===e){email.style.border="3px solid red";let e=document.createElement("small"),t=document.createTextNode("Please Enter a Valid Email in the format user_example@example.com");e.appendChild(t),form.appendChild(e)}else if(isvalid_email(e))email.style.border="3px solid Green";else{email.style.border="3px solid red";const e=document.createElement("small");let t=document.createTextNode("Please Enter a Valid Email in the format user_example@example.com");e.appendChild(t),form.appendChild(e)}email.addEventListener("click",(function(){error_msg.className="error-msg"}))}function isvalid_email(e){return/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(e)}form.addEventListener("submit",(function(e){e.preventDefault(),validation()}));

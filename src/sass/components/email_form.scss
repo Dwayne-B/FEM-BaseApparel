@@ -1,8 +1,10 @@
 @use "../util" as *;
 
 .main_content_form{
+    
     position: relative;
         &_input{
+            position: relative;
             width: 100%;
             border-radius: rem(50);
             height: rem(48);
@@ -26,6 +28,8 @@
     height: rem(48);
     border: none;
             }
+
+  
         
     
     }
