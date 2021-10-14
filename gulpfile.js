@@ -57,7 +57,7 @@ src("./src/js/*").pipe(terser()).pipe(dest("./src/js/"))
     //copy files to dist folder
 const copyToDist= async ()=>{
 
-    src("./src/**/*").pipe(dest("docs"))
+    src("./src/**/*").pipe(dest("dist"))
 }
 
 task('build',series(minify,copyToDist));
