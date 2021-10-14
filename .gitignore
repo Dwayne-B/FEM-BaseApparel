@@ -2,7 +2,7 @@ style-guide.md
 task.md
 
 node_modules/
-dist/
+
 
 # Avoid accidental Sketch file upload 
 ###############################################

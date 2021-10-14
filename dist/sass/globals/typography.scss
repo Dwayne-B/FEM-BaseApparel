@@ -1,0 +1,40 @@
+// ## Typography
+
+// ### Body Copy
+
+// - Font size: 16px
+@use "../util" as *;
+
+html{
+    font-size: 14px;
+   
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+    padding:0;
+}
+a,a:visited,a:active{
+    text-decoration: none;
+}
+
+.main_content_title{
+  
+    letter-spacing: rem(10.8254);
+    color: #423A3A;
+    font-size: rem(40);
+    font-weight: 600;
+    text-transform: uppercase;
+
+    & > span{
+        font-weight: 300;
+    }
+}
+ 
+.main_content_text{
+line-height: rem(22);
+}
+.main_content_title span,.main_content_text,.main_content_form_input::placeholder{
+    color: var(--title-emphasis);
+    
+    }
